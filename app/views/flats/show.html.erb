@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-between navbar">
+  <div class="p-2"><h2>Airbnb</h2></div>
+    <%#= simple_form_for [@flat] do |f| %>
+      <%#= f.input :name %>
+      <%#= f.submit "Search", class: "btn btn-primary" %>
+    <%# end %>
+  <%= link_to "Add flat", new_flat_path, class: "btn btn-primary shadow bg-body-tertiary rounded mt-2 mb-2"%>
+</div>
+
+<img class="image" src="https://images.unsplash.com/photo-1559767949-0faa5c7e9992?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="">
+
+<div class="show-container px-5">
+  <div class="w-75 mx-3">
+    <div class="bg-light rounded p-4 mb-4 shadow">
+      <h2> <%= @flat.name %> </h2>
+      <p> <%= @flat.address %> </p>
+    </div>
+    <div class="bg-light rounded p-4 shadow">
+      <h3>A bit more about this flat...</h3>
+      <p> <%= @flat.description %> </p>
+      <%#mapbox %>
+    </div>
+  </div>
+  <div class="w-25 mx-3">
+    <div class="book bg-light rounded shadow">
+      <h4>Book this place!</h4>
+      <%# simple.form  %>
+    </div>
+    <div class="bg-light rounded shadow">
+      <h3></h3>
+      <div class="d-flex">
+        <%= @flat.number_of_guests %><i class="fa-solid fa-people-group"></i>
+        <%= @flat.price_per_night %><i class="fa-solid fa-euro-sign"></i>
+      </div>
+    </div>
+    <div class="d-flex bg-light rounded shadow">
+      <h4>Share</h4>
+      <ul class="inline">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-pinterest"></i>
+      </ul>
+    </div>
+  </div>
+</div>
